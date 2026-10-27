@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EnterpriseCore accessible multi-page dashboard featuring high-contrast design, keyboard navigation, and WCAG 2.1 compliance.">
+  <title>EnterpriseCore Dashboard | Overview</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Accessible Skip-to-Content Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="app-container">
+    <!-- Header Landmark -->
+    <header class="app-header" aria-label="Site Header">
+      <div class="header-brand">
+        <button type="button" 
+                class="menu-toggle-btn" 
+                aria-expanded="false" 
+                aria-controls="sidebar-navigation" 
+                aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+          <span>Menu</span>
+        </button>
+        <a href="index.html" aria-label="EnterpriseCore Dashboard Home">
+          <span class="brand-icon" aria-hidden="true">EC</span>
+          <span>EnterpriseCore</span>
+        </a>
+      </div>
+
+      <div class="header-actions">
+        <div class="user-badge" role="group" aria-label="Current logged in administrator">
+          <span class="user-avatar" aria-hidden="true">DN</span>
+          <span>Dhruv Narayan (Admin)</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sidebar Navigation Landmark -->
+    <aside class="app-sidebar" id="sidebar-navigation" aria-label="Application Sidebar">
+      <nav class="sidebar-nav" aria-labelledby="nav-general-heading">
+        <h2 class="nav-heading" id="nav-general-heading">General Management</h2>
+        <ul class="nav-list">
+          <li>
+            <a href="index.html" class="nav-link" aria-current="page" id="nav-link-dashboard">
+              <span>
+                <span class="nav-item-icon" aria-hidden="true">📊</span>
+                <span>Dashboard</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="pages/users.html" class="nav-link" id="nav-link-users">
+              <span>
+                <span class="nav-item-icon" aria-hidden="true">👥</span>
+                <span>Users</span>
+              </span>
+              <span class="nav-badge"><span class="sr-only">Total count: </span>24</span>
+            </a>
+          </li>
+          <li>
+            <a href="pages/reports.html" class="nav-link" id="nav-link-reports">
+              <span>
+                <span class="nav-item-icon" aria-hidden="true">📈</span>
+                <span>Reports</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="pages/settings.html" class="nav-link" id="nav-link-settings">
+              <span>
+                <span class="nav-item-icon" aria-hidden="true">⚙️</span>
+                <span>Settings</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area Landmark -->
+    <main class="app-main" id="main-content" tabindex="-1" aria-labelledby="page-title">
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb navigation">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true">/</li>
+          <li class="breadcrumb-current" aria-current="page">Dashboard</li>
+        </ol>
+      </nav>
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 id="page-title" class="page-title">Executive Performance &amp; System Overview</h1>
+        <p class="page-description">
+          Real-time enterprise metrics, active infrastructure health, and recent operational audit trails.
+        </p>
+      </div>
+
+      <!-- Dashboard Section 1: Summary Metric Cards -->
+      <section class="dashboard-section" aria-labelledby="metrics-summary-heading">
+        <h2 id="metrics-summary-heading" class="section-title">Key Performance Indicators</h2>
+        <div class="metrics-grid">
+          <article class="metric-card" aria-labelledby="metric-revenue-title">
+            <div class="metric-header">
+              <h3 id="metric-revenue-title" class="metric-title">Monthly Enterprise ARR</h3>
+              <span class="nav-item-icon" aria-hidden="true">💳</span>
+            </div>
+            <p class="metric-value">$1,248,500</p>
+            <div class="metric-trend is-positive">
+              <span aria-hidden="true">▲</span>
+              <span>+12.4% from last quarter</span>
+            </div>
+          </article>
+
+          <article class="metric-card" aria-labelledby="metric-users-title">
+            <div class="metric-header">
+              <h3 id="metric-users-title" class="metric-title">Active Operator Accounts</h3>
+              <span class="nav-item-icon" aria-hidden="true">👥</span>
+            </div>
+            <p class="metric-value">2,845</p>
+            <div class="metric-trend is-positive">
+              <span aria-hidden="true">▲</span>
+              <span>+3.8% new this month</span>
+            </div>
+          </article>
+
+          <article class="metric-card" aria-labelledby="metric-uptime-title">
+            <div class="metric-header">
+              <h3 id="metric-uptime-title" class="metric-title">Infrastructure Uptime</h3>
+              <span class="nav-item-icon" aria-hidden="true">⚡</span>
+            </div>
+            <p class="metric-value">99.98%</p>
+            <div class="metric-trend is-positive">
+              <span aria-hidden="true">✓</span>
+              <span>Exceeds SLA requirements</span>
+            </div>
+          </article>
+
+          <article class="metric-card" aria-labelledby="metric-tickets-title">
+            <div class="metric-header">
+              <h3 id="metric-tickets-title" class="metric-title">Pending Approvals</h3>
+              <span class="nav-item-icon" aria-hidden="true">🛡️</span>
+            </div>
+            <p class="metric-value">14</p>
+            <div class="metric-trend is-neutral">
+              <span aria-hidden="true">●</span>
+              <span>3 requires compliance sign-off</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Dashboard Section 2: Quick Actions -->
+      <section class="dashboard-section" aria-labelledby="quick-actions-heading">
+        <h2 id="quick-actions-heading" class="section-title">Operational Quick Actions</h2>
+        <div class="quick-actions-bar" role="toolbar" aria-label="Dashboard quick operations">
+          <span class="quick-actions-label">Common Actions:</span>
+          <button type="button" 
+                  class="btn btn-primary" 
+                  data-modal-target="#confirmation-modal" 
+                  aria-haspopup="dialog">
+            <span aria-hidden="true">+</span>
+            <span>Deploy Security Policy</span>
+          </button>
+          <a href="pages/reports.html" class="btn btn-secondary">
+            <span aria-hidden="true">📊</span>
+            <span>View Financial Audit</span>
+          </a>
+          <a href="pages/users.html" class="btn btn-secondary">
+            <span aria-hidden="true">👤</span>
+            <span>Manage User Directory</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Dashboard Section 3: Data Table -->
+      <section class="dashboard-section" aria-labelledby="audit-table-heading">
+        <h2 id="audit-table-heading" class="section-title">System Activity &amp; Audit Trail</h2>
+        <div class="table-wrapper">
+          <section class="table-responsive-container" 
+                   aria-label="Recent Enterprise Transactions and Audit Records" 
+                   tabindex="0">
+            <table class="data-table">
+              <caption class="sr-only">Recent Enterprise Transactions and Audit Records</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Reference ID</th>
+                  <th scope="col">Operator</th>
+                  <th scope="col">Action Details</th>
+                  <th scope="col">Timestamp</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">SEC-9041</th>
+                  <td>Sarah Jenkins</td>
+                  <td>Database Backup &amp; Offsite Replication</td>
+                  <td><time datetime="2026-09-14T18:30:00Z">Sep 14, 2026 18:30</time></td>
+                  <td>
+                    <span class="status-badge is-active">
+                      <span aria-hidden="true">●</span>
+                      <span>Completed</span>
+                    </span>
+                  </td>
+                  <td>
+                    <button type="button" 
+                            class="btn btn-secondary btn-sm" 
+                            data-modal-target="#confirmation-modal" 
+                            aria-label="View security record SEC-9041 details">
+                      Inspect
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">SEC-9040</th>
+                  <td>Marcus Vance</td>
+                  <td>Zero-Trust Firewall Rule Update</td>
+                  <td><time datetime="2026-09-14T17:15:00Z">Sep 14, 2026 17:15</time></td>
+                  <td>
+                    <span class="status-badge is-pending">
+                      <span aria-hidden="true">▲</span>
+                      <span>Pending Verification</span>
+                    </span>
+                  </td>
+                  <td>
+                    <button type="button" 
+                            class="btn btn-secondary btn-sm" 
+                            data-modal-target="#confirmation-modal" 
+                            aria-label="View security record SEC-9040 details">
+                      Inspect
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">SEC-9039</th>
+                  <td>Elena Rostova</td>
+                  <td>Production API Token Rotation</td>
+                  <td><time datetime="2026-09-14T15:42:00Z">Sep 14, 2026 15:42</time></td>
+                  <td>
+                    <span class="status-badge is-active">
+                      <span aria-hidden="true">●</span>
+                      <span>Completed</span>
+                    </span>
+                  </td>
+                  <td>
+                    <button type="button" 
+                            class="btn btn-secondary btn-sm" 
+                            data-modal-target="#confirmation-modal" 
+                            aria-label="View security record SEC-9039 details">
+                      Inspect
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">SEC-9038</th>
+                  <td>David Chen</td>
+                  <td>Payment Gateway Webhook Sync</td>
+                  <td><time datetime="2026-09-14T14:10:00Z">Sep 14, 2026 14:10</time></td>
+                  <td>
+                    <span class="status-badge is-inactive">
+                      <span aria-hidden="true">■</span>
+                      <span>Terminated</span>
+                    </span>
+                  </td>
+                  <td>
+                    <button type="button" 
+                            class="btn btn-secondary btn-sm" 
+                            data-modal-target="#confirmation-modal" 
+                            aria-label="View security record SEC-9038 details">
+                      Inspect
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </section>
+
+      <!-- Dashboard Section 4: Recent Activity Feed -->
+      <section class="dashboard-section" aria-labelledby="activity-stream-heading">
+        <h2 id="activity-stream-heading" class="section-title">Infrastructure Activity Stream</h2>
+        <ul class="activity-feed">
+          <li class="activity-item">
+            <div class="activity-content">
+              <h3 class="activity-title">Automated Security Patch Applied</h3>
+              <p class="activity-desc">Kubernetes cluster node pool upgraded across us-east regions.</p>
+            </div>
+            <time class="activity-time" datetime="2026-09-14T19:00:00Z">25 mins ago</time>
+          </li>
+          <li class="activity-item">
+            <div class="activity-content">
+              <h3 class="activity-title">New Enterprise Tenant Provisioned</h3>
+              <p class="activity-desc">Dedicated PostgreSQL cluster allocated with encryption at rest.</p>
+            </div>
+            <time class="activity-time" datetime="2026-09-14T17:45:00Z">1 hour ago</time>
+          </li>
+          <li class="activity-item">
+            <div class="activity-content">
+              <h3 class="activity-title">Quarterly SOC2 Compliance Export Completed</h3>
+              <p class="activity-desc">Encrypted evidence bundle archived in audit cold storage vault.</p>
+            </div>
+            <time class="activity-time" datetime="2026-09-14T14:20:00Z">5 hours ago</time>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Footer Landmark -->
+    <footer class="app-footer" aria-label="Site Footer">
+      <div>
+        <p>&copy; 2026 EnterpriseCore Technologies Inc. All rights reserved.</p>
+      </div>
+      <nav aria-label="Footer links navigation">
+        <ul class="footer-links">
+          <li><a href="docs/accessibility.md">Accessibility Statement</a></li>
+          <li><a href="pages/settings.html">System Preferences</a></li>
+          <li><a href="README.md">Documentation</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </div>
+
+  <!-- Native Accessible Confirmation Modal -->
+  <dialog id="confirmation-modal" 
+          class="modal-dialog" 
+          aria-labelledby="modal-title-main" 
+          aria-describedby="modal-desc-main">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-title-main" class="modal-title">Confirm Administrative Action</h2>
+        <button type="button" 
+                class="modal-close-btn" 
+                data-modal-close 
+                aria-label="Close dialog window">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="modal-desc-main">
+          You are initiating a system modification. This operation requires elevated administrator permissions and will be logged in the immutable audit registry.
+        </p>
+        <p>Would you like to authorize this request now?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-modal-close>
+          Cancel
+        </button>
+        <button type="button" class="btn btn-primary" data-modal-close>
+          Authorize &amp; Proceed
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Scripts -->
+  <script src="js/navigation.js"></script>
+  <script src="js/modal.js"></script>
+</body>
+</html>

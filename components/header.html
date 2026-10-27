@@ -1,0 +1,29 @@
+<!-- ==========================================================================
+     Component: Accessible Header Landmark
+     Standards: HTML5 Semantic <header>, WCAG 2.1 Focus & Skip Link
+     ========================================================================== -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header class="app-header" aria-label="Site Header">
+  <div class="header-brand">
+    <button type="button" 
+            class="menu-toggle-btn" 
+            aria-expanded="false" 
+            aria-controls="sidebar-navigation" 
+            aria-label="Toggle navigation menu">
+      <span aria-hidden="true">☰</span>
+      <span>Menu</span>
+    </button>
+    <a href="index.html" aria-label="EnterpriseCore Dashboard Home">
+      <span class="brand-icon" aria-hidden="true">EC</span>
+      <span>EnterpriseCore</span>
+    </a>
+  </div>
+
+  <div class="header-actions">
+    <div class="user-badge" role="group" aria-label="Current logged in administrator">
+      <span class="user-avatar" aria-hidden="true">DN</span>
+      <span>Dhruv Narayan (Admin)</span>
+    </div>
+  </div>
+</header>

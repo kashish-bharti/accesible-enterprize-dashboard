@@ -1,0 +1,44 @@
+<!-- ==========================================================================
+     Component: Accessible Native Confirmation Modal
+     Standards: HTML5 Semantic <dialog>, aria-labelledby, aria-describedby
+     WCAG 2.1 Focus Trap, Escape Dismissal, Focus Restoration
+     ========================================================================== -->
+<dialog id="confirmation-modal" 
+        class="modal-dialog" 
+        aria-labelledby="modal-dialog-title" 
+        aria-describedby="modal-dialog-description">
+  <div class="modal-content">
+    <header class="modal-header">
+      <h2 id="modal-dialog-title" class="modal-title">Confirm Administrative Action</h2>
+      <button type="button" 
+              class="modal-close-btn" 
+              data-modal-close 
+              aria-label="Close dialog window">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </header>
+
+    <div class="modal-body">
+      <p id="modal-dialog-description">
+        You are about to execute a privileged enterprise action. This operation will be permanently recorded in the system audit log.
+      </p>
+      <p>
+        Please confirm that you have reviewed the security implications before continuing.
+      </p>
+    </div>
+
+    <footer class="modal-footer">
+      <button type="button" 
+              class="btn btn-secondary" 
+              data-modal-close>
+        Cancel
+      </button>
+      <button type="button" 
+              class="btn btn-primary" 
+              data-modal-close 
+              id="modal-confirm-action-btn">
+        Confirm &amp; Proceed
+      </button>
+    </footer>
+  </div>
+</dialog>

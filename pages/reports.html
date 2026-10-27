@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View financial audits, performance benchmarks, and compliance reporting with WCAG 2.1 accessible tables and metrics.">
+  <title>EnterpriseCore | Analytics &amp; Reports</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Accessible Skip-to-Content Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="app-container">
+    <!-- Header Landmark -->
+    <header class="app-header" aria-label="Site Header">
+      <div class="header-brand">
+        <button type="button" 
+                class="menu-toggle-btn" 
+                aria-expanded="false" 
+                aria-controls="sidebar-navigation" 
+                aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+          <span>Menu</span>
+        </button>
+        <a href="../index.html" aria-label="EnterpriseCore Dashboard Home">
+          <span class="brand-icon" aria-hidden="true">EC</span>
+          <span>EnterpriseCore</span>
+        </a>
+      </div>
+
+      <div class="header-actions">
+        <div class="user-badge" role="group" aria-label="Current logged in administrator">
+          <span class="user-avatar" aria-hidden="true">DN</span>
+          <span>Dhruv Narayan (Admin)</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sidebar Navigation Landmark -->
+    <aside class="app-sidebar" id="sidebar-navigation" aria-label="Application Sidebar">
+      <nav class="sidebar-nav" aria-labelledby="nav-general-heading">
+        <h2 class="nav-heading" id="nav-general-heading">General Management</h2>
+        <ul class="nav-list">
+          <li>
+            <a href="../index.html" class="nav-link" id="nav-link-dashboard">
+              <span>
+                <span class="nav-item-icon" aria-hidden="true">📊</span>
+                <span>Dashboard</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="users.html" class="nav-link" id="nav-link-users">
+              <span>
+                <span class="nav-item-icon" aria-hidden="true">👥</span>
+                <span>Users</span>
+              </span>
+              <span class="nav-badge"><span class="sr-only">Total count: </span>24</span>
+            </a>
+          </li>
+          <li>
+            <a href="reports.html" class="nav-link" aria-current="page" id="nav-link-reports">
+              <span>
+                <span class="nav-item-icon" aria-hidden="true">📈</span>
+                <span>Reports</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="settings.html" class="nav-link" id="nav-link-settings">
+              <span>
+                <span class="nav-item-icon" aria-hidden="true">⚙️</span>
+                <span>Settings</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area Landmark -->
+    <main class="app-main" id="main-content" tabindex="-1" aria-labelledby="page-title">
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb navigation">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true">/</li>
+          <li class="breadcrumb-current" aria-current="page">Reports</li>
+        </ol>
+      </nav>
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 id="page-title" class="page-title">Executive Analytics &amp; Reports</h1>
+        <p class="page-description">
+          Cross-cloud financial reconciliation, infrastructure efficiency metrics, and SLA compliance audits.
+        </p>
+      </div>
+
+      <!-- Report KPI Cards -->
+      <section class="dashboard-section" aria-labelledby="financial-metrics-heading">
+        <h2 id="financial-metrics-heading" class="section-title">Telemetry &amp; Cost Efficiency</h2>
+        <div class="metrics-grid">
+          <article class="metric-card" aria-labelledby="rep-metric-invoiced">
+            <div class="metric-header">
+              <h3 id="rep-metric-invoiced" class="metric-title">Quarterly Invoiced</h3>
+              <span class="nav-item-icon" aria-hidden="true">💵</span>
+            </div>
+            <p class="metric-value">$3,745,210</p>
+            <div class="metric-trend is-positive">
+              <span aria-hidden="true">▲</span>
+              <span>On budget (98.2% allocation)</span>
+            </div>
+          </article>
+
+          <article class="metric-card" aria-labelledby="rep-metric-latency">
+            <div class="metric-header">
+              <h3 id="rep-metric-latency" class="metric-title">Global Median Latency</h3>
+              <span class="nav-item-icon" aria-hidden="true">⚡</span>
+            </div>
+            <p class="metric-value">42 ms</p>
+            <div class="metric-trend is-positive">
+              <span aria-hidden="true">▼</span>
+              <span>-8ms reduction from CDN optimization</span>
+            </div>
+          </article>
+
+          <article class="metric-card" aria-labelledby="rep-metric-compliance">
+            <div class="metric-header">
+              <h3 id="rep-metric-compliance" class="metric-title">SOC2 &amp; ISO Compliance</h3>
+              <span class="nav-item-icon" aria-hidden="true">🛡️</span>
+            </div>
+            <p class="metric-value">100%</p>
+            <div class="metric-trend is-positive">
+              <span aria-hidden="true">✓</span>
+              <span>Zero non-conformities found</span>
+            </div>
+          </article>
+
+          <article class="metric-card" aria-labelledby="rep-metric-incidents">
+            <div class="metric-header">
+              <h3 id="rep-metric-incidents" class="metric-title">MTTR (Mean Time to Recovery)</h3>
+              <span class="nav-item-icon" aria-hidden="true">⏱️</span>
+            </div>
+            <p class="metric-value">4.2 mins</p>
+            <div class="metric-trend is-positive">
+              <span aria-hidden="true">▼</span>
+              <span>Within tier-1 resilience target</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Export & Generation Toolbar -->
+      <section class="dashboard-section" aria-labelledby="reports-actions-heading">
+        <h2 id="reports-actions-heading" class="section-title">Audit Export Actions</h2>
+        <div class="quick-actions-bar" role="toolbar" aria-label="Report export tools">
+          <span class="quick-actions-label">Audit Bundles:</span>
+          <button type="button" 
+                  class="btn btn-primary" 
+                  data-modal-target="#export-modal" 
+                  aria-haspopup="dialog">
+            <span aria-hidden="true">📥</span>
+            <span>Export Full PDF Audit Dossier</span>
+          </button>
+          <button type="button" 
+                  class="btn btn-secondary" 
+                  data-modal-target="#export-modal" 
+                  aria-haspopup="dialog">
+            <span aria-hidden="true">📊</span>
+            <span>Export Raw Ledger (CSV)</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Data Table: Financial Reports -->
+      <section class="dashboard-section" aria-labelledby="financial-table-heading">
+        <h2 id="financial-table-heading" class="section-title">Quarterly Infrastructure Ledger</h2>
+        <div class="table-wrapper">
+          <section class="table-responsive-container" 
+                   aria-label="Quarterly Financial and Operational Audit Breakdown Table" 
+                   tabindex="0">
+            <table class="data-table">
+              <caption class="sr-only">Quarterly Financial and Operational Audit Breakdown Table</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Reporting Period</th>
+                  <th scope="col">Compute Allocation</th>
+                  <th scope="col">Storage &amp; Backup</th>
+                  <th scope="col">Global Network Outbound</th>
+                  <th scope="col">SLA Delivery</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">2026 - Q3 (Current)</th>
+                  <td>$428,900</td>
+                  <td>$112,400</td>
+                  <td>$45,800</td>
+                  <td>
+                    <span class="status-badge is-active">
+                      <span aria-hidden="true">●</span>
+                      <span>99.99% Met</span>
+                    </span>
+                  </td>
+                  <td>
+                    <button type="button" 
+                            class="btn btn-secondary btn-sm" 
+                            data-modal-target="#export-modal" 
+                            aria-label="Download audit report for 2026 Q3">
+                      Download
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">2026 - Q2</th>
+                  <td>$415,200</td>
+                  <td>$108,600</td>
+                  <td>$42,100</td>
+                  <td>
+                    <span class="status-badge is-active">
+                      <span aria-hidden="true">●</span>
+                      <span>99.98% Met</span>
+                    </span>
+                  </td>
+                  <td>
+                    <button type="button" 
+                            class="btn btn-secondary btn-sm" 
+                            data-modal-target="#export-modal" 
+                            aria-label="Download audit report for 2026 Q2">
+                      Download
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">2026 - Q1</th>
+                  <td>$398,750</td>
+                  <td>$104,200</td>
+                  <td>$39,800</td>
+                  <td>
+                    <span class="status-badge is-active">
+                      <span aria-hidden="true">●</span>
+                      <span>100.0% Met</span>
+                    </span>
+                  </td>
+                  <td>
+                    <button type="button" 
+                            class="btn btn-secondary btn-sm" 
+                            data-modal-target="#export-modal" 
+                            aria-label="Download audit report for 2026 Q1">
+                      Download
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">2025 - Q4</th>
+                  <td>$385,400</td>
+                  <td>$99,800</td>
+                  <td>$38,200</td>
+                  <td>
+                    <span class="status-badge is-active">
+                      <span aria-hidden="true">●</span>
+                      <span>99.96% Met</span>
+                    </span>
+                  </td>
+                  <td>
+                    <button type="button" 
+                            class="btn btn-secondary btn-sm" 
+                            data-modal-target="#export-modal" 
+                            aria-label="Download audit report for 2025 Q4">
+                      Download
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Landmark -->
+    <footer class="app-footer" aria-label="Site Footer">
+      <div>
+        <p>&copy; 2026 EnterpriseCore Technologies Inc. All rights reserved.</p>
+      </div>
+      <nav aria-label="Footer links navigation">
+        <ul class="footer-links">
+          <li><a href="../docs/accessibility.md">Accessibility Statement</a></li>
+          <li><a href="settings.html">System Preferences</a></li>
+          <li><a href="../README.md">Documentation</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </div>
+
+  <!-- Native Accessible Export Confirmation Modal -->
+  <dialog id="export-modal" 
+          class="modal-dialog" 
+          aria-labelledby="modal-export-title" 
+          aria-describedby="modal-export-desc">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-export-title" class="modal-title">Export Compliance Records</h2>
+        <button type="button" 
+                class="modal-close-btn" 
+                data-modal-close 
+                aria-label="Close export dialog">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="modal-export-desc">
+          You have requested an export of encrypted compliance records. The generated package contains confidential financial ledger statements.
+        </p>
+        <p>Would you like to initiate secure compilation and download?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-modal-close>
+          Cancel
+        </button>
+        <button type="button" class="btn btn-primary" data-modal-close>
+          Compile &amp; Download
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Scripts -->
+  <script src="../js/navigation.js"></script>
+  <script src="../js/modal.js"></script>
+</body>
+</html>

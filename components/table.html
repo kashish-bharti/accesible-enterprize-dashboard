@@ -1,0 +1,94 @@
+<!-- ==========================================================================
+     Component: Accessible Data Table
+     Standards: HTML5 Semantic <table>, <caption>, <thead>, <tbody>, <th scope="col/row">
+     WCAG 2.1 Keyboard Scrollable Region (tabindex="0", <section aria-label="...">)
+     ========================================================================== -->
+<section class="table-wrapper" aria-labelledby="table-caption-title">
+  <section class="table-responsive-container" 
+           aria-label="Recent Audit Records and Transactions Table" 
+           tabindex="0">
+    <table class="data-table">
+      <caption id="table-caption-title">Recent Enterprise Activity &amp; Audit Logs</caption>
+      <thead>
+        <tr>
+          <th scope="col">Reference ID</th>
+          <th scope="col">User</th>
+          <th scope="col">Action Performed</th>
+          <th scope="col">Timestamp</th>
+          <th scope="col">Status</th>
+          <th scope="col">Operations</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">LOG-8921</th>
+          <td>Sarah Jenkins</td>
+          <td>Database Backup &amp; Replication</td>
+          <td><time datetime="2026-09-14T18:30:00Z">Sep 14, 2026 18:30</time></td>
+          <td>
+            <span class="status-badge is-active">
+              <span aria-hidden="true">●</span>
+              <span>Completed</span>
+            </span>
+          </td>
+          <td>
+            <button type="button" class="btn btn-secondary btn-sm" data-modal-target="#confirmation-modal" aria-label="Review details for audit log LOG-8921">
+              Review
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">LOG-8920</th>
+          <td>Marcus Vance</td>
+          <td>Security Policy Modification</td>
+          <td><time datetime="2026-09-14T17:15:00Z">Sep 14, 2026 17:15</time></td>
+          <td>
+            <span class="status-badge is-pending">
+              <span aria-hidden="true">▲</span>
+              <span>Pending Review</span>
+            </span>
+          </td>
+          <td>
+            <button type="button" class="btn btn-secondary btn-sm" data-modal-target="#confirmation-modal" aria-label="Review details for audit log LOG-8920">
+              Review
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">LOG-8919</th>
+          <td>Elena Rostova</td>
+          <td>API Key Revocation</td>
+          <td><time datetime="2026-09-14T15:42:00Z">Sep 14, 2026 15:42</time></td>
+          <td>
+            <span class="status-badge is-active">
+              <span aria-hidden="true">●</span>
+              <span>Completed</span>
+            </span>
+          </td>
+          <td>
+            <button type="button" class="btn btn-secondary btn-sm" data-modal-target="#confirmation-modal" aria-label="Review details for audit log LOG-8919">
+              Review
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">LOG-8918</th>
+          <td>David Chen</td>
+          <td>Billing Account Transition</td>
+          <td><time datetime="2026-09-14T14:10:00Z">Sep 14, 2026 14:10</time></td>
+          <td>
+            <span class="status-badge is-inactive">
+              <span aria-hidden="true">■</span>
+              <span>Cancelled</span>
+            </span>
+          </td>
+          <td>
+            <button type="button" class="btn btn-secondary btn-sm" data-modal-target="#confirmation-modal" aria-label="Review details for audit log LOG-8918">
+              Review
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</section>

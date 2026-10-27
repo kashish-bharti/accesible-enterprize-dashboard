@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Configure enterprise operator profile, credentials, role-based security settings, and notifications with accessible WCAG 2.1 forms.">
+  <title>EnterpriseCore | Profile &amp; System Settings</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Accessible Skip-to-Content Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="app-container">
+    <!-- Header Landmark -->
+    <header class="app-header" aria-label="Site Header">
+      <div class="header-brand">
+        <button type="button" 
+                class="menu-toggle-btn" 
+                aria-expanded="false" 
+                aria-controls="sidebar-navigation" 
+                aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+          <span>Menu</span>
+        </button>
+        <a href="../index.html" aria-label="EnterpriseCore Dashboard Home">
+          <span class="brand-icon" aria-hidden="true">EC</span>
+          <span>EnterpriseCore</span>
+        </a>
+      </div>
+
+      <div class="header-actions">
+        <div class="user-badge" role="group" aria-label="Current logged in administrator">
+          <span class="user-avatar" aria-hidden="true">DN</span>
+          <span>Dhruv Narayan (Admin)</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sidebar Navigation Landmark -->
+    <aside class="app-sidebar" id="sidebar-navigation" aria-label="Application Sidebar">
+      <nav class="sidebar-nav" aria-labelledby="nav-general-heading">
+        <h2 class="nav-heading" id="nav-general-heading">General Management</h2>
+        <ul class="nav-list">
+          <li>
+            <a href="../index.html" class="nav-link" id="nav-link-dashboard">
+              <span>
+                <span class="nav-item-icon" aria-hidden="true">📊</span>
+                <span>Dashboard</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="users.html" class="nav-link" id="nav-link-users">
+              <span>
+                <span class="nav-item-icon" aria-hidden="true">👥</span>
+                <span>Users</span>
+              </span>
+              <span class="nav-badge"><span class="sr-only">Total count: </span>24</span>
+            </a>
+          </li>
+          <li>
+            <a href="reports.html" class="nav-link" id="nav-link-reports">
+              <span>
+                <span class="nav-item-icon" aria-hidden="true">📈</span>
+                <span>Reports</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="settings.html" class="nav-link" aria-current="page" id="nav-link-settings">
+              <span>
+                <span class="nav-item-icon" aria-hidden="true">⚙️</span>
+                <span>Settings</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area Landmark -->
+    <main class="app-main" id="main-content" tabindex="-1" aria-labelledby="page-title">
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb navigation">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true">/</li>
+          <li class="breadcrumb-current" aria-current="page">Settings</li>
+        </ol>
+      </nav>
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 id="page-title" class="page-title">Operator Profile &amp; System Configuration</h1>
+        <p class="page-description">
+          Update administrative contact credentials, modify authorization policies, and manage system preferences.
+        </p>
+      </div>
+
+      <!-- Accessible Form Section -->
+      <section class="form-card" aria-labelledby="form-card-title">
+        <h2 id="form-card-title" class="section-title">User Account &amp; System Parameters</h2>
+
+        <!-- Accessible Error Summary Banner (Appears on invalid submit, keyboard focusable) -->
+        <div class="error-summary" 
+             tabindex="-1" 
+             role="alert" 
+             aria-labelledby="summary-title">
+          <h3 id="summary-title" class="error-summary-title">There is a problem with your submission</h3>
+          <ul class="error-summary-list">
+            <!-- Dynamically populated with jump links to invalid fields -->
+          </ul>
+        </div>
+
+        <!-- Accessible Success Banner -->
+        <div class="success-banner" 
+             tabindex="-1" 
+             role="status" 
+             aria-live="polite">
+          <span aria-hidden="true">✓</span>
+          <span>Your configuration settings have been successfully validated and saved to the cluster.</span>
+        </div>
+
+        <!-- The Settings Form -->
+        <form id="settings-form" data-validate="true" method="post" action="#">
+
+          <!-- Fieldset 1: Identity & Contact -->
+          <fieldset class="form-fieldset">
+            <legend class="form-legend">Identity &amp; Contact Details</legend>
+
+            <!-- Name -->
+            <div class="form-group">
+              <label for="user-name" class="form-label">
+                Full Name <span class="required-indicator" aria-hidden="true">*</span>
+              </label>
+              <p id="user-name-hint" class="form-hint">Enter your legal first and last name.</p>
+              <input type="text" 
+                     id="user-name" 
+                     name="userName" 
+                     class="form-control" 
+                     value="Dhruv Narayan"
+                     required 
+                     minlength="2" 
+                     maxlength="60" 
+                     autocomplete="name" 
+                     aria-describedby="user-name-hint user-name-error">
+              <span id="user-name-error" class="form-error" role="alert"></span>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="user-email" class="form-label">
+                Enterprise Email Address <span class="required-indicator" aria-hidden="true">*</span>
+              </label>
+              <p id="user-email-hint" class="form-hint">Must be your authorized corporate domain address.</p>
+              <input type="email" 
+                     id="user-email" 
+                     name="userEmail" 
+                     class="form-control" 
+                     value="dhruv.narayan@enterprise.com"
+                     required 
+                     autocomplete="email" 
+                     aria-describedby="user-email-hint user-email-error">
+              <span id="user-email-error" class="form-error" role="alert"></span>
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+              <label for="user-phone" class="form-label">
+                Contact Phone Number <span class="required-indicator" aria-hidden="true">*</span>
+              </label>
+              <p id="user-phone-hint" class="form-hint">Standard format: 555-019-2834 or +1-555-019-2834.</p>
+              <input type="tel" 
+                     id="user-phone" 
+                     name="userPhone" 
+                     class="form-control" 
+                     value="+1-555-019-2834"
+                     required 
+                     pattern="^(\+?[0-9]{1,3}[-.\s]?)?(\(?[0-9]{3}\)?[-.\s]?)?[0-9]{3}[-.\s]?[0-9]{4}$" 
+                     autocomplete="tel" 
+                     aria-describedby="user-phone-hint user-phone-error">
+              <span id="user-phone-error" class="form-error" role="alert"></span>
+            </div>
+          </fieldset>
+
+          <!-- Fieldset 2: Role & Status -->
+          <fieldset class="form-fieldset">
+            <legend class="form-legend">Security Role &amp; Operational Status</legend>
+
+            <!-- Role -->
+            <div class="form-group">
+              <label for="user-role" class="form-label">
+                System Role <span class="required-indicator" aria-hidden="true">*</span>
+              </label>
+              <p id="user-role-hint" class="form-hint">Determines role-based permissions across APIs and console.</p>
+              <select id="user-role" 
+                      name="userRole" 
+                      class="form-control" 
+                      required 
+                      aria-describedby="user-role-hint user-role-error">
+                <option value="">-- Please select an authorization role --</option>
+                <option value="administrator" selected>System Administrator (Full Access)</option>
+                <option value="compliance-officer">Compliance &amp; Security Auditor</option>
+                <option value="data-analyst">Data Analyst (Read &amp; Export Only)</option>
+                <option value="operator">Operations Specialist</option>
+              </select>
+              <span id="user-role-error" class="form-error" role="alert"></span>
+            </div>
+
+            <!-- Status -->
+            <div class="form-group">
+              <label for="user-status" class="form-label">
+                Account Status <span class="required-indicator" aria-hidden="true">*</span>
+              </label>
+              <p id="user-status-hint" class="form-hint">Controls account activity and session generation.</p>
+              <select id="user-status" 
+                      name="userStatus" 
+                      class="form-control" 
+                      required 
+                      aria-describedby="user-status-hint user-status-error">
+                <option value="">-- Please select account status --</option>
+                <option value="active" selected>Active (Normal Operations)</option>
+                <option value="pending">Pending Approval / Provisioning</option>
+                <option value="suspended">Suspended / Inactive</option>
+              </select>
+              <span id="user-status-error" class="form-error" role="alert"></span>
+            </div>
+          </fieldset>
+
+          <!-- Fieldset 3: Notification Preferences -->
+          <fieldset class="form-fieldset">
+            <legend class="form-legend">Notification Preferences</legend>
+            <div class="choice-group">
+              <label class="choice-label">
+                <input type="checkbox" name="notifySecurity" checked>
+                <span>Security incident and anomalous login alerts (Immediate dispatch)</span>
+              </label>
+              <label class="choice-label">
+                <input type="checkbox" name="notifyAudit" checked>
+                <span>Weekly compliance digest and audit ledger summaries</span>
+              </label>
+              <label class="choice-label">
+                <input type="checkbox" name="notifyMaintenance">
+                <span>Advance notification for scheduled cloud cluster maintenance</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Action Buttons -->
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" id="save-settings-btn">
+              <span>Save Configuration</span>
+            </button>
+            <button type="reset" class="btn btn-secondary" id="reset-settings-btn">
+              <span>Reset to Defaults</span>
+            </button>
+            <button type="button" 
+                    class="btn btn-danger" 
+                    data-modal-target="#revoke-modal" 
+                    aria-haspopup="dialog">
+              <span>Revoke Active Sessions</span>
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer Landmark -->
+    <footer class="app-footer" aria-label="Site Footer">
+      <div>
+        <p>&copy; 2026 EnterpriseCore Technologies Inc. All rights reserved.</p>
+      </div>
+      <nav aria-label="Footer links navigation">
+        <ul class="footer-links">
+          <li><a href="../docs/accessibility.md">Accessibility Statement</a></li>
+          <li><a href="settings.html">System Preferences</a></li>
+          <li><a href="../README.md">Documentation</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </div>
+
+  <!-- Native Accessible Confirmation Modal for Revoking Sessions -->
+  <dialog id="revoke-modal" 
+          class="modal-dialog" 
+          aria-labelledby="modal-revoke-title" 
+          aria-describedby="modal-revoke-desc">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-revoke-title" class="modal-title">Revoke All Active Sessions</h2>
+        <button type="button" 
+                class="modal-close-btn" 
+                data-modal-close 
+                aria-label="Close session revocation dialog">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="modal-revoke-desc">
+          This will immediately invalidate all active JWT tokens, OAuth tokens, and authenticated browser cookies across all logged-in devices.
+        </p>
+        <p>You will be required to re-authenticate with your hardware MFA security key.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-modal-close>
+          Cancel
+        </button>
+        <button type="button" class="btn btn-danger" data-modal-close>
+          Revoke Sessions Now
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Scripts -->
+  <script src="../js/navigation.js"></script>
+  <script src="../js/modal.js"></script>
+  <script src="../js/validation.js"></script>
+</body>
+</html>

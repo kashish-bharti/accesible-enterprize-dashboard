@@ -1,0 +1,44 @@
+<!-- ==========================================================================
+     Component: Accessible Sidebar Navigation
+     Standards: HTML5 Semantic <aside>, <nav>, WCAG 2.1 aria-current, aria-label
+     ========================================================================== -->
+<aside class="app-sidebar" id="sidebar-navigation" aria-label="Sidebar Navigation">
+  <nav class="sidebar-nav" aria-labelledby="nav-general-heading">
+    <h2 class="nav-heading" id="nav-general-heading">General Management</h2>
+    <ul class="nav-list">
+      <li>
+        <a href="index.html" class="nav-link" id="nav-link-dashboard">
+          <span>
+            <span class="nav-item-icon" aria-hidden="true">📊</span>
+            <span>Dashboard</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="pages/users.html" class="nav-link" id="nav-link-users">
+          <span>
+            <span class="nav-item-icon" aria-hidden="true">👥</span>
+            <span>Users</span>
+          </span>
+          <span class="nav-badge"><span class="sr-only">Total count: </span>24</span>
+        </a>
+      </li>
+      <li>
+        <a href="pages/reports.html" class="nav-link" id="nav-link-reports">
+          <span>
+            <span class="nav-item-icon" aria-hidden="true">📈</span>
+            <span>Reports</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="pages/settings.html" class="nav-link" id="nav-link-settings">
+          <span>
+            <span class="nav-item-icon" aria-hidden="true">⚙️</span>
+            <span>Settings</span>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>
